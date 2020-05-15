@@ -1,0 +1,217 @@
+@tailwind base;
+
+@tailwind components;
+
+.tab {
+    @apply text-center block border border-white rounded text-white py-4 px-8;
+    background-color: #323232;
+}
+.tab:hover,
+.is-active .tab {
+    @apply bg-orange-main;
+}
+
+.calculate_btn {
+    @apply bg-orange-main font-bold py-4 px-10 rounded text-white text-lg cursor-pointer;
+    &.compare {
+        @apply text-center;
+        background-color: #376af9;
+    }
+}
+
+.story_box {
+    @apply shadow rounded bg-white text-gray-700 mx-auto px-10 text-center py-16 mb-10;
+}
+
+.car-models {
+    @apply m-2 bg-gray-100 p-4;
+    width: 44%;
+    position: relative;
+    &.is-selected,
+    &:focus {
+        background-color: #ff5300;
+        color: white;
+        &:after {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            content: "";
+            border-bottom: 30px solid #fff;
+            border-left: 30px solid transparent;
+        }
+    }
+}
+
+.maker-btn {
+    @apply block px-4 py-6 bg-gray-100 m-2 flex items-center relative;
+    width: 44%;
+    div {
+        @apply mx-auto;
+        p {
+            @apply text-center mt-4;
+        }
+    }
+    &.is-selected,
+    &:focus {
+        border-top: 5px solid #ff4300;
+        &:after {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            content: "";
+            border-bottom: 30px solid #fff;
+            border-left: 30px solid transparent;
+        }
+    }
+}
+
+.car-option {
+    @apply py-4 border-b border-dashed border-gray-300 pl-12 text-gray-800;
+    background: url("../images/option.png") no-repeat 10px center;
+    cursor: pointer;
+    &.checked,
+    &:focus {
+        span {
+            font-weight: bold;
+        }
+        background-image: url("../images/option_checked.png");
+    }
+}
+
+.helper-box {
+    @apply rounded shadow p-6;
+    h4 {
+        @apply font-bold mb-4;
+    }
+    p {
+        @apply text-gray-700;
+    }
+}
+.condition-select {
+    @apply py-4 relative;
+    select {
+        @apply block appearance-none w-full bg-gray-200 border border-gray-100 text-gray-700 py-3 px-4 pr-8 rounded leading-tight;
+    }
+    div {
+        @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700;
+        svg {
+            @apply fill-current h-4 w-4;
+        }
+    }
+}
+
+.result-table {
+    @apply table-auto mt-2 w-full;
+    border-top: 2px solid #323232;
+    td {
+        @apply py-4 pr-1 pl-4;
+
+        @media (min-width: 1280px) {
+            @apply p-6 text-left;
+        }
+        border: 1px solid #dbdbdb;
+        vertical-align: middle;
+    }
+    .subject {
+        @apply bg-gray-100 w-20 text-center px-1;
+        @media (min-width: 1280px) {
+            @apply w-40;
+        }
+    }
+    &.estor-result {
+        td {
+            border: none;
+            border-bottom: 1px solid #dbdbdb;
+            &.index {
+                @apply w-2/12;
+                @media (min-width: 1280px) {
+                    @apply w-1/12;
+                }
+                text-align: center;
+            }
+            &.capital {
+                @apply pl-16;
+                @media (min-width: 1280px) {
+                    @apply pl-24;
+                }
+                $providers: aj, kb, bnk, jb, sh, wrc, hd, hs, mz, nh, hana, orix;
+                @each $provider in $providers {
+                    &.#{$provider} {
+                        background-image: url(/images/capital_icons/#{$provider}.png);
+                        background-position: left top;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            &.final_rent {
+                @apply text-right;
+            }
+            &.top3 {
+                @apply font-bold;
+                &.index,
+                strong {
+                    color: #ff5300;
+                }
+            }
+        }
+    }
+}
+
+.main-visual {
+    background-image: url(../images/m_bg.jpg);
+    background-color: #121518;
+    @media (min-width: 1280px) {
+        background-image: none;
+    }
+}
+
+.promotion-video {
+    height: 350px;
+    @media (min-width: 1280px) {
+        height: 700px;
+    }
+}
+
+.estor-bg {
+    @apply bg-cover py-10;
+    background: url(../images/estor_bg.png) #121518;
+}
+
+#privacy_agreement h2 {
+    font-weight: bold;
+    font-size: 1rem;
+    @apply text-blue-700 mb-2 mt-4;
+}
+
+#privacy_agreement table th {
+    @apply border border-gray-500 bg-gray-200 py-2;
+}
+
+#privacy_agreement table td {
+    @apply border border-gray-500 p-2;
+}
+
+@tailwind utilities;
+
+.bg-orange-main {
+    background-color: #ff5300;
+}
+.bg-kakao {
+    background-color: #ffd401;
+}
+
+footer {
+    background-color: #323232;
+    color: white;
+}
+.card-bg {
+    background-image: url(../images/story/cards.png);
+}
+.maker-img {
+    max-width: 80px;
+}
+.modal {
+    transition: opacity 0.25s ease;
+}
