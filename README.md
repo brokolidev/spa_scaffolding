@@ -1,14 +1,7 @@
-<p align="center"><img src="https://rentdirect.co.kr/images/logo.svg" width="400"></p>
+# Laravel + Vue SPA 기본 셋업
 
-## About Rentdirect
+### Laravel 6.18.3
 
-Rentdirect is a website for people who want to estimate rental car montly fee for themselves.
-It is built with laravel + Vue JS and also is SPA.
+### Vue
 
-Go to Live website: [렌다](https://rentdirect.co.kr)
-
-## Technologies
-
--   **[Laravel](https://laravel.com/)**
--   **[Vue JS](https://vuejs.org/)**
--   **[Axios](https://github.com/axios/axios)**
+### aixos
